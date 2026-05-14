@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Job Mailer</title>
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+            font-family:Arial;
+            background:#0f172a;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            width:400px;
+            background:#1e293b;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 0 20px rgba(0,0,0,0.5);
+        }
+
+        h1{
+            color:white;
+            text-align:center;
+            margin-bottom:25px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:10px;
+            margin-bottom:20px;
+            border:none;
+            border-radius:8px;
+            background:#334155;
+            color:white;
+            font-size:15px;
+        }
+
+        input::placeholder{
+            color:#cbd5e1;
+        }
+
+        label{
+            color:#e2e8f0;
+            font-size:14px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#3b82f6;
+            border:none;
+            border-radius:8px;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#2563eb;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Job Mailer</h1>
+
+    <form action="/send"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <label>Company Name</label>
+
+        <input type="text"
+               name="company"
+               placeholder="Enter company name"
+               required>
+
+        <label>Job Role</label>
+
+        <input type="text"
+               name="role"
+               placeholder="Enter job role"
+               required>
+               <label>Skills</label>
+
+    <input type="text"
+           name="skills"
+           placeholder="Python, Flask, AWS, SQL"
+           required>
+
+        <label>Recruiter Email</label>
+
+        <input type="email"
+               name="recruiter"
+               placeholder="Enter recruiter email"
+               required>
+
+        <label>Upload Resume</label>
+
+        <input type="file"
+               name="resume"
+               required>
+
+        <button type="submit">
+            Send Application
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
